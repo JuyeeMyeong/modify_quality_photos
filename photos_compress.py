@@ -10,8 +10,8 @@ file_list_pic = [file for file in file_list if file.endswith('.jpeg')]
 for f in file_list_pic:
     img = Image.open(f)
     width, height = img.size
-    TARGET_WIDTH = 50
+    TARGET_WIDTH = 50 #change this value if you want to resize 
     coefficient = width / 50
     new_height = height / coefficient
     img = img.resize((int(TARGET_WIDTH),int(new_height)),Image.ANTIALIAS)
-    img.save(f,quality=95)
+    img.save(f,quality=95) #change this value if you want to compress
